@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For My Wife Fatima ❤️</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #1b1b1b;
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      padding: 20px;
+      overflow: hidden;
+    }
+
+    .container {
+      max-width: 90%;
+      margin: 30px auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+    }
+
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 32px;
+      color: #ff5e78;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.8;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    .heart {
+      color: #ff4d6d;
+      font-size: 18px;
+    }
+
+    .signature {
+      margin-top: 20px;
+      font-size: 22px;
+      font-family: 'Dancing Script', cursive;
+      color: #ff85a2;
+      animation: fadeIn 4s ease-in-out;
+    }
+
+    #interactive {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+      max-width: 90%;
+      margin: 0 auto;
+    }
+
+    h1#question {
+      font-size: 24px;
+      color: #ff5e78;
+      font-family: 'Dancing Script', cursive;
+      margin-bottom: 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    #options {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    #options button {
+      font-size: 18px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 30px;
+      background: linear-gradient(45deg, #ff5e78, #ff85a2, #ff4d6d);
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(255, 94, 120, 0.5);
+      transition: all 0.3s ease-in-out;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #options button::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 300%;
+      height: 300%;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      transition: transform 0.4s ease-in-out;
+    }
+
+    #options button:hover::before {
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    #options button:hover {
+      box-shadow: 0 0 20px rgba(255, 94, 120, 0.8);
+    }
+
+    #options button:active {
+      transform: scale(0.95);
+    }
+
+    .love-you {
+      font-size: 26px;
+      font-family: 'Dancing Script', cursive;
+      font-weight: bold;
+      color: #FF6B99;
+      text-shadow: 0px 0px 10px #FF6B99, 0px 0px 18px #FFB6C1, 0px 0px 28px #FFD9E3;
+      animation: glow 2s infinite alternate, fadeIn 3s ease-in-out;
+      margin-top: 20px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0px 0px 10px #FF6B99; }
+      to { text-shadow: 0px 0px 18px #FFB6C1, 0px 0px 28px #FFD9E3; }
+    }
+
+    #toggleMusicBtn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 999;
+      background: #ff85a2;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(255, 94, 120, 0.5);
+    }
+
+    .heart-fall {
+      position: fixed;
+      top: -50px;
+      color: #ff5e78;
+      font-size: 24px;
+      animation: fall 6s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(-50px) rotate(0deg); opacity: 0; }
+      50% { opacity: 1; }
+      100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+    }
+  </style>
+  <script>
+    function askQuestion(question, callback) {
+      document.getElementById('question').innerText = question;
+      document.getElementById('options').style.display = 'flex';
+      document.getElementById('yes').onclick = function() { callback(true); };
+      document.getElementById('no').onclick = function() { callback(false); };
+    }
+
+    function startQuestions() {
+      askQuestion('Ap mujh se pyar krti ho?', function(answer) {
+        if (answer) {
+          alert('Meri jaan, Ap meri duniya ho! ❤️🥰');
+          askQuestion('Kya ap mujh se shadi krogi?', function(answer) {
+            if (answer) {
+              alert('Meri mohabbat, ab bas ek haan ki dair hai! 💍💞');
+              askQuestion('Kya ap hamesha mera sath dogi?', function(answer) {
+                if (answer) {
+                  document.getElementById('interactive').style.display = 'none';
+                  document.getElementById('letter').style.display = 'block';
+                } else {
+                  alert('Apke bina sab kuch adhura Hai... 😔💔');
+                }
+              });
+            } else {
+              alert('Mujhe umeed hai ek din Ap zaroor manogi! 💖');
+            }
+          });
+        } else {
+          alert('Meri jaan, Apki haan ka intezar rahega! 😘💕');
+        }
+      });
+    }
+
+    function toggleMusic() {
+      const audio = document.getElementById('bgMusic');
+      if (audio.paused) {
+        audio.volume = 0;
+        audio.play();
+        let fadeAudio = setInterval(() => {
+          if (audio.volume < 1) {
+            audio.volume = Math.min(audio.volume + 0.05, 1);
+          } else {
+            clearInterval(fadeAudio);
+          }
+        }, 200);
+      } else {
+        audio.pause();
+      }
+    }
+
+    // Falling hearts
+    function createHearts() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart-fall');
+      heart.style.left = Math.random() * window.innerWidth + 'px';
+      heart.innerHTML = '❤️';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 6000);
+    }
+    setInterval(createHearts, 300);
+  </script>
+</head>
+<body onload="startQuestions()">
+
+  <audio id="bgMusic" autoplay loop>
+    <source src="https://raw.githubusercontent.com/saqib098-bot/song/ba66d7d9a3325f4065aeed32984396cb33aa44df/Song.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <button id="toggleMusicBtn" onclick="toggleMusic()">🎵 Toggle Music</button>
+
+  <div id="interactive">
+    <h1 id="question">Loading...</h1>
+    <div id="options" style="display: none;">
+      <button id="yes">Yes</button>
+      <button id="no">No</button>
+    </div>
+  </div>
+
+  <div id="letter" class="container" style="display: none;">
+    <h1>Meri Duaon Ka Jawaab, Fatima ❤️🫂</h1>
+    <p>✨ Ap meri <span class="heart">dil ki awaaz</span> ho, jo har pal mere saath rehti hai. Apke bina, zindagi ek adhuri kitaab jaisi lagti hai. 📖💫</p>
+    <p>💖 Jab Apki hasi sunta hoon, lagta hai jaise taare bhi muskurane lage hain. Apki ek nazar, ek muskurahat meri duniya ko roshan kar deti hai. 🌙✨</p>
+    <p>🔥 Ap woh <b>dua</b> ho jo mere labon se bina kahe nikalti hai, woh <b>chahat</b> ho jo sirf Apse juri hai. Ap meri <b>kismat</b> ho, mera sukoon ho. 💕</p>
+    <p>Main sirf Apka hoon, aur <b>hamesha</b> Apka rahunga. Ap meri duaon ka sabse haseen <b>jawab</b> ho. ❤️🥹</p>
+    <p class="love-you">💘 I <span class="love">Love</span> You, <span class="fatima">Fatima</span> 💘</p>
+    <p class="signature">Sirf Apka,<br>💘 <b>SaQiB</b> 💘</p>
+  </div>
+
+</body>
+</html>
